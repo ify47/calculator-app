@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {
   HeaderContainer,
   StyledInput,
   StyledToggle,
+  ThemeSelection,
 } from "../styles/Header.styles";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const Header = () => {
   const buttons = [
-    { id: "one", label: "button one" },
-    { id: "two", label: "button two" },
-    { id: "three", label: "button three" },
+    { id: "one", value: "themeOne" },
+    { id: "two", value: "themeTwo" },
+    { id: "three", value: "themeThree" },
   ];
 
-  const [activeTheme, setActiveTheme] = useState("one");
-
-  const handleThemeClick = (id) => {
-    setActiveTheme(id);
-  };
-
-  console.log(activeTheme);
+  const { activeTheme, handleThemeChange } = useContext(ThemeContext);
 
   return (
     <header>
-      <div className="me">1 2 3</div>
+      <ThemeSelection>1 2 3</ThemeSelection>
       <HeaderContainer>
-        <h2>Calc</h2>
+        <h2>calc</h2>
+        <h3>THEME</h3>
         <StyledToggle>
           {buttons.map((button) => (
             <StyledInput
@@ -32,9 +29,8 @@ const Header = () => {
               type="radio"
               name="toggle"
               id={button.id}
-              onClick={() => handleThemeClick(button.id)}
-              checked={activeTheme === button.id}
-              onChange={(e) => {}}
+              checked={activeTheme === button.value}
+              onChange={() => handleThemeChange(button.value)}
             />
           ))}
         </StyledToggle>
