@@ -6,13 +6,13 @@ export const InputsField = styled.div`
   border-radius: 7px;
   color: ${({ theme }) => theme.colors.textColorThree};
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-end;
   flex-wrap: wrap;
   padding: 33px 24px;
-  height: 40px;
-  overflow-x: scroll;
+  height: 45px;
+  overflow-y: scroll;
+  word-break: break-all;
   -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
