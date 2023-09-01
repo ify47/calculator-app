@@ -10,6 +10,7 @@
 
 # production
 /build
+/calculator-app-main
 
 # misc
 .DS_Store
