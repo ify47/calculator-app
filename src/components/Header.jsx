@@ -21,19 +21,17 @@ const Header = () => {
       <ThemeSelection>1 2 3</ThemeSelection>
       <HeaderContainer>
         <h1>calc</h1>
-        <h3>THEME</h3>
+        <h2>THEME</h2>
         <StyledToggle>
           {buttons.map((button) => (
-            <label>
-              <StyledInput
-                key={button.id}
-                type="radio"
-                name="toggle"
-                id={button.id}
-                checked={activeTheme === button.value}
-                onChange={() => handleThemeChange(button.value)}
-              />
-            </label>
+            <StyledInput
+              key={button.id}
+              type="radio"
+              name="toggle"
+              id={button.id}
+              checked={activeTheme === button.value}
+              onChange={() => handleThemeChange(button.value)}
+            />
           ))}
         </StyledToggle>
       </HeaderContainer>

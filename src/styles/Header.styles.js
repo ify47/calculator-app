@@ -24,7 +24,7 @@ export const HeaderContainer = styled.div`
   & h1 {
     font-size: 1.5em;
   }
-  & h3 {
+  & h2 {
     font-size: 10px;
     letter-spacing: 1px;
     padding-left: 57%;
@@ -54,7 +54,7 @@ export const StyledInput = styled.input`
   background-color: ${({ theme }) => theme.colors.toggleAndKeyBackground};
   border-radius: 50%;
   opacity: 0;
-  margin: -3px 1px;
+  margin: 1px 1px;
   transition: 0.25s;
   &#one:checked {
     opacity: 1;
