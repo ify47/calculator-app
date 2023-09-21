@@ -1,4 +1,4 @@
-# Todo App
+# Calculator App
 
 This project is a solution to the [Calculator-app](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29) from Frontend Mentor. 
 
